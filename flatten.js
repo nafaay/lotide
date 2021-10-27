@@ -9,7 +9,6 @@ const eqArrays = function (array1, array2) {
         return false;
       }
     }
-    console.log("x");
     return true;
   }
 }

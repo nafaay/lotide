@@ -25,28 +25,19 @@ const assertArraysEqual = function(array1, array2){
 }
 
 
-const data1 = [1, 2, 5, 7, 2, -1, 2, 4, 5];
-const arr = [];
-const takeUntil = function(array, callback){
-
-    for(elem of array){
-        callback(elem);
-        if (elem < 0 || elem === ","){
-            break;
-        }
-        else{
-            arr.push(elem);
-        }
+const findKey = function(myObject, callback){
+    for(let key in myObject){
+      if(callback(myObject[key])){
+        return key;
+      }
     }
-    return arr;
 };
 
-
-
-const results1 = takeUntil(data1, x => x<0);
-console.log(results1);
-
-const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
-const results2 = takeUntil(data2, x => x === ',');
-console.log(results2);
-
+console.log(findKey({
+    "Blue Hill": { stars: 1 },
+    "Akaleri":   { stars: 3 },
+    "noma":      { stars: 2 },
+    "elBulli":   { stars: 3 },
+    "Ora":       { stars: 2 },
+    "Akelarre":  { stars: 3 }
+}, x => x.stars === 2)) // => "noma"

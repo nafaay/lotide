@@ -9,13 +9,17 @@ const eqArrays = function (array1, array2) {
         return false;
       }
     }
-    console.log("x");
     return true;
   }
 }
 
 const assertArraysEqual = function(array1, array2){
-  return eqArrays(array1, array2);
+  if(eqArrays(array1, array2)){
+    console.log("Passed");
+  }
+  else{
+    console.log("Failed");
+  }
 }
 
 console.log(assertArraysEqual([1, 2, 3],[1, 2, 3]));

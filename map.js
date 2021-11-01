@@ -43,3 +43,5 @@ const map = function(array, callback) {
 
   console.log(assertArraysEqual(map(words, callback), [1, 3, 4], true));
   console.log(assertArraysEqual(map(numbers, callback), [1, 3, 4], true));
+
+  module.exports = map;

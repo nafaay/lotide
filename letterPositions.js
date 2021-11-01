@@ -29,3 +29,5 @@ const letterPositions = function(sentence){
 }
 
 console.log(letterPositions("Hello world"));
+
+module.exports = letterPositions;

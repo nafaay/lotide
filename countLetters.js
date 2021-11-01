@@ -33,3 +33,5 @@ const countLetters =function(ourString){
 }
 
 console.log(countLetters("Hello world"));
+
+module.exports = countLetters;

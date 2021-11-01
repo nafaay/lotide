@@ -39,3 +39,5 @@ const without = function(source, itemsToRemove) {
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]);
 console.log(assertArraysEqual(words, ["hello", "world", "lighthouse"]));
+
+module.exports = without;

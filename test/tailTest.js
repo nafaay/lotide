@@ -1,11 +1,15 @@
 // CODE TEST
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
 const tail = require('../tail');
 
-assertEqual(tail([1, 4, 3, 4]), [2, 3, 4]);
-assertEqual(tail([1, 2, 3, 4]), [2, 3, 4]);
+// TEST CODE using Mocha and Chai
+describe("#tail", () => {
+    it("should return [2, 3] for [1, 2, 3]", () => {
+      assert.deepEqual(tail([1, 2, 3]), [2, 3]);
+    });
+    it("should return '5' for ['5']", () => {
+     assert.deepEqual(tail(['5']), '5');
+    })
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result, ["Lighthouse", "Labs"]);
-
+  });
 
